@@ -72,8 +72,7 @@ li {
     background-color: hsl(235, 24%, 19%);
     border: none;
     outline: none;
- 
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     border-bottom: 0.1px solid hsl(235, 19%, 35%);
 }
 .list-container input{
