@@ -88,6 +88,17 @@ li,.li-between-a{
     right: 21px;
     cursor: pointer;
 }
+.li-between{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.li-between P{
+    margin-left: 20PX;
+}
+#itemcount{
+    margin-right: 20px;
+}
 .li-between-a{
     display: flex;
     justify-content: end;
