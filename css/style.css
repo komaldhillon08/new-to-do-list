@@ -36,6 +36,10 @@ body {
     display: flex;
     flex-direction: column;
 }
+.main-to-do-li{
+    background-color: hsl(235, 24%, 19%);
+
+}
 
 .main-to-do h1 {
     display: flex;
@@ -63,7 +67,7 @@ body {
     border-radius: 5px;
 }
 
-li {
+li,.li-between-a{
     list-style: none;
     padding: 20px;
     font-size: 20px;    
@@ -83,4 +87,18 @@ li {
     position: absolute;
     right: 21px;
     cursor: pointer;
+}
+.li-between-a{
+    display: flex;
+    justify-content: end;
+}
+.li-between-a a{
+    text-decoration: none;
+    color: hsl(220, 98%, 61%);
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+.li-between-a a:hover{
+    color: white;
 }
