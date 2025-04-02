@@ -97,7 +97,6 @@ li,.li-between-a{
     color: hsl(220, 98%, 61%);
     margin-left: 20px;
     transition: all 0.3s ease;
-    font-size: 15px;
 }
 .li-between-a a:hover{
     color: white;
