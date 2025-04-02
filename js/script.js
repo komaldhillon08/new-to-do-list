@@ -25,6 +25,8 @@ inputText.addEventListener('keydown', function (event) {
                 } else {
                     li.style.textDecoration = "none";
                 }
+                saveData();
+
 
             })
 
@@ -40,12 +42,9 @@ inputText.addEventListener('keydown', function (event) {
                 let li = event.target.closest("li");
                 if (li) {
                     li.remove();
-                    console.log("itme - remove");
+                    saveData();
 
-                } else {
-
-                }
-
+                } 
             })
 
 
@@ -54,7 +53,43 @@ inputText.addEventListener('keydown', function (event) {
             li.appendChild(img);
             inputText.value = ""; // Clear input after adding
 
-
+            saveData();
         }
     }
 });
+
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showData() {
+    listContainer.innerHTML = localStorage.getItem("data") || "";
+    // Re-attach event listeners to the loaded items
+    document.querySelectorAll(".checkbox").forEach(checkbox => {
+        checkbox.addEventListener("click", function () {
+            let li = checkbox.parentElement;
+            if (checkbox.checked) {
+                li.style.textDecoration = "line-through";
+            } else {
+                li.style.textDecoration = "none";
+            }
+            saveData();
+        });
+    });
+
+    document.querySelectorAll(".cross").forEach(img => {
+        img.addEventListener("click", function () {
+            let li = img.closest("li");
+            if (li) {
+                li.remove();
+                console.log("item removed");
+                saveData();
+            }
+        });
+    });
+}
+
+
+window.onload = function () {
+    showData();
+};
