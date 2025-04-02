@@ -1,4 +1,4 @@
-let toDoList = []
+/* let toDoList = []
 
 
 
@@ -15,13 +15,15 @@ let count = 0;
     itemCount.textContent = listContainer.children.length;
 } */
 
-function deleteToDo(id) {
+/* function deleteToDo(id) {
     toDoList = toDoList.filter(item => item.id !== id);
     renderToDoList(toDoList);
 }
-function checkToDo(id) {
+*/
 
-    /* console.log("toDo"); */
+/* function checkToDo(id) {
+
+   
     renderToDoList(toDoList);
     // toDoList = toDoList.map(item => item.id !==id{})
     console.log("todo --", toDoList, id)
@@ -35,14 +37,14 @@ function checkToDo(id) {
 
 
 
-}
+}  */
 /* function crossToDo(id) {
     let 
 } */
 
 
 
-function renderToDoList(list) {
+/* function renderToDoList(list) {
     console.log("check");
     listContainer.innerHTML = "";
     list.forEach((item, index) => {
@@ -89,7 +91,7 @@ inputText.addEventListener('keydown', function (event) {
                 checked: false,
             });
             renderToDoList(toDoList);
-
+ */
 
             // console.log("array >", toDoList)
 
@@ -141,10 +143,11 @@ inputText.addEventListener('keydown', function (event) {
             // inputText.value = ""; // Clear input after adding
 
             /*  updateItemCount(); */
-        }
-    }
-});
+        // }
+    // }
+// });
 
 
 
 
+ 
