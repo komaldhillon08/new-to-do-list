@@ -26,7 +26,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
-    height: 35vh;
+    height: 350px;
 }
 
 .main-to-do {
@@ -91,17 +91,20 @@ li,.li-between-a{
 .li-between{
     display: flex;
    align-items: center;
+  
+
    justify-content: space-between;
 }
-.li-between P{
-    margin-left: 20PX;
+.li-between {
+    
 }
-#itemcount{
-    margin-right: 20px;
-}
+
 .li-between-a{
     display: flex;
-    justify-content: end;
+    /* justify-content: end; */
+    justify-content: space-between;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .li-between-a a{
     text-decoration: none;
@@ -111,4 +114,43 @@ li,.li-between-a{
 }
 .li-between-a a:hover{
     color: white;
+}
+
+
+
+@media(max-width:1399px){
+    .li-between-a a {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:1199px){
+    .li-between-a a {
+        font-size: 11px;
+    }
+    #itemcount {
+        
+        font-size: 15px;
+    }
+}
+
+
+@media(max-width:1023px){
+    .main-to-do {
+        width: 50%;
+
+    }
+}
+@media(max-width:775px){
+    .main-to-do {
+        width: 80%;
+
+    }
+}
+
+@media(max-width:575px){
+    .main-to-do {
+        width: 80%;
+
+    }
 }

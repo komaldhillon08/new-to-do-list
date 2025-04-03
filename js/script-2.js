@@ -1,4 +1,4 @@
-/* let toDoList = []
+ let toDoList = []
 
 
 
@@ -9,21 +9,17 @@ let itemCount = document.getElementById("itemcount");
 
 let count = 0;
 
-
-
-/* function updateItemCount() {
+ function updateItemCount() {
     itemCount.textContent = listContainer.children.length;
-} */
+} 
 
-/* function deleteToDo(id) {
+function deleteToDo(id) {
     toDoList = toDoList.filter(item => item.id !== id);
     renderToDoList(toDoList);
 }
-*/
+function checkToDo(id) {
 
-/* function checkToDo(id) {
-
-   
+     console.log("toDo"); 
     renderToDoList(toDoList);
     // toDoList = toDoList.map(item => item.id !==id{})
     console.log("todo --", toDoList, id)
@@ -34,17 +30,14 @@ let count = 0;
 
     renderToDoList(toDoList)
 
-
-
-
-}  */
+}
 /* function crossToDo(id) {
     let 
 } */
 
 
 
-/* function renderToDoList(list) {
+function renderToDoList(list) {
     console.log("check");
     listContainer.innerHTML = "";
     list.forEach((item, index) => {
@@ -54,6 +47,7 @@ let count = 0;
         let li = document.createElement("li");
         li.textContent = item.name;
         li.setAttribute("data-id", item.id);
+        
 
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";  // Example text for the span
@@ -75,8 +69,10 @@ let count = 0;
         listContainer.appendChild(li);
         li.prepend(checkbox);
         li.appendChild(img);
-
     });
+    let countToDoList = list.filter( (item) => item.checked === false )
+
+       itemCount.innerHTML = `items left ${countToDoList.length}`
 }
 
 inputText.addEventListener('keydown', function (event) {
@@ -91,7 +87,7 @@ inputText.addEventListener('keydown', function (event) {
                 checked: false,
             });
             renderToDoList(toDoList);
- */
+
 
             // console.log("array >", toDoList)
 
@@ -143,11 +139,15 @@ inputText.addEventListener('keydown', function (event) {
             // inputText.value = ""; // Clear input after adding
 
             /*  updateItemCount(); */
-        // }
-    // }
-// });
+        }
+    }
+});
 
 
+/* obj = 0 ;
 
-
- 
+for (const key of obj) {
+    console.log(obj);
+    
+    
+} */
