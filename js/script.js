@@ -19,7 +19,7 @@ inputText.addEventListener('keydown', function (event) {
             alert("Type something");
         } else {
             // add li 
-            let li = document.createElement("li");
+            let li = document.createElement("li");/*  */
             li.textContent = inputText.value;
             mainListContainer.style.display = "block";
             count += 1;
@@ -72,3 +72,8 @@ inputText.addEventListener('keydown', function (event) {
 });
 
 
+
+
+
+// this is rong code that is why this file is not include in index.html 
+// right file is script2-.js this file code is good 
